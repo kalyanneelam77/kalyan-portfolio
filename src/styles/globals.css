@@ -1,0 +1,816 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+/******************** STARTED GLOBAL STYLES ********************/
+
+/* Global body styles */
+body {
+  @apply font-sans text-gray-800 min-h-screen flex flex-col bg-gradient-to-br from-blue-200 to-blue-500; /* Clean gradient background */
+  margin: 0;
+  padding: 0;
+  overflow: auto; /* Allow scrolling */
+}
+
+/* Navbar styles */
+.navbar {
+  @apply bg-transparent shadow-none p-0; /* Remove background color, shadow, and padding */
+}
+
+/* Main content grows to fill the screen */
+main {
+  @apply flex-grow;
+  padding: 0; /* Removed unnecessary padding */
+  width: 100%; /* Ensure full width */
+}
+
+/* Link styles with a smooth hover transition */
+a {
+  @apply text-indigo-600 hover:text-indigo-800 transition duration-300;
+}
+
+/* Section spacing */
+section {
+  @apply py-10; /* Add uniform padding to sections */
+}
+
+/* Heading styles */
+h1, h2, h3 {
+  @apply font-bold text-gray-900; /* Standardized heading styles */
+}
+
+/* Input, textarea, and select elements styles */
+input, textarea, select {
+  @apply border border-gray-300 rounded-lg p-2 focus:ring-indigo-500 focus:border-indigo-500; /* Clean border and focus styles */
+}
+
+/* Card styles */
+.card {
+  @apply bg-white shadow-lg rounded-lg p-6 mb-16; /* Clean card styling */
+}
+
+/******************** ENDED GLOBAL STYLES ********************/
+
+
+/*************** Home Styles ***********************/
+
+
+
+/*************** Resume Styles ***********************/
+/* Styling for the resume section */
+#resume {
+  padding: 3rem 1.5rem;
+  text-align: center;
+  background-color: #f6dd00; /* Light blue background */
+  border-bottom: 4px solid #90cdf4; /* Bottom border with light blue */
+}
+
+/* Max-width for container and centering */
+#resume .max-w-4xl {
+  max-width: 56rem;
+  margin: 0 auto;
+}
+
+/* Heading styles */
+#resume h1 {
+  font-size: 3rem; /* Larger font size for heading */
+  font-weight: 800; /* Extra bold */
+  color: #2b6cb0; /* Darker blue */
+  margin-bottom: 1.5rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Paragraph styles */
+#resume p {
+  font-size: 1.25rem; /* Slightly larger font size */
+  color: #4a5568; /* Medium gray */
+  margin-bottom: 2rem;
+  line-height: 1.6; /* Increased line-height for better readability */
+}
+
+/* Button styles */
+#resume a {
+  color: #ffffff; /* White text */
+  background-color: #3182ce; /* Blue background */
+  padding: 0.75rem 1.5rem; /* Increased padding for button */
+  font-weight: 600; /* Semi-bold */
+  border-radius: 0.5rem; /* Slightly more rounded corners */
+  display: flex; /* Flex container */
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+  gap: 0.5rem; /* Space between icon and text */
+  text-decoration: none; /* Remove underline */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+}
+
+/* Button hover effect */
+#resume a:hover {
+  background-color: #2b6cb0; /* Darker blue on hover */
+  transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+#resume a svg {
+  margin-right: 0.5rem; /* Space between icon and text */
+}
+
+/*************** Resume Styles ***********************/
+
+
+
+
+
+/*************** Project Styles ***********************/
+/*************** Project Styles ***********************/
+
+/* Container styles */
+#projects {
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #0fa30c, #fbc531); /* Gradient background with blue and yellow */
+  color: #fff;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  transition: background 0.4s ease-in-out;
+}
+
+.projects .max-w-4xl {
+  max-width: 300rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Header styles */
+h1 {
+  font-size: 2.8rem;
+  color: #fbc531; /* Bright yellow for header */
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 1px;
+  text-shadow: 0 0 10px rgba(251, 197, 49, 0.8); /* Glow effect */
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+h1:hover {
+  color: #7209b7; /* Dark purple on hover */
+  text-shadow: 0 0 15px rgba(114, 9, 183, 1); /* Stronger glow */
+}
+
+p {
+  font-size: 1.2rem;
+  color: #f8f8f2; /* Light color for better readability */
+  text-align: center;
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+}
+
+/* Grid styles */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+/* Card styles */
+.card {
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* Softer shadow for depth */
+  padding: 2rem;
+  text-align: center;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.05); /* Slightly more transparent */
+  backdrop-filter: blur(12px); /* Glassmorphism */
+}
+
+.card:hover {
+  transform: translateY(-10px); /* Lift effect on hover */
+  background-color: #ff6173; /* Soft red background on hover */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+/* Title and description styles */
+.card h2 {
+  font-size: 1.8rem;
+  color: #fbc531; /* Bright yellow for card titles */
+  margin-bottom: 1rem;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.card h2:hover {
+  color: #7209b7; /* Dark purple color on hover */
+}
+
+.card p {
+  font-size: 1.1rem;
+  color: #f8f8f2; /* Light color for descriptions */
+  margin-bottom: 1.5rem;
+}
+
+/* Technologies section styles */
+.technologies {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Technology image styles */
+.technologyImage {
+  border-radius: 6px;
+  background: #ff5e3a; /* Bright coral for icons */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 60px;
+  height: 60px;
+}
+
+.technologyImage:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* GitHub link styles */
+.githubLink {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.githubLink a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.githubLink a:hover {
+  transform: scale(1.2);
+}
+
+.githubLink img {
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.githubLink img:hover {
+  filter: brightness(1.3);
+  transform: rotate(360deg);
+}
+
+/* Video Wrapper styles */
+.videoWrapper {
+  margin-top: 1.5rem;
+  padding: 0.5rem;
+  border: 2px solid #fbc531; /* Bright yellow border */
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.5); /* Darker transparent background */
+  cursor: pointer;
+  color: #ff5e3a; /* Bright coral for text */
+  font-weight: 600;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.videoWrapper:hover {
+  background: #7209b7; /* Dark purple background on hover */
+  color: #f8ea00; /* Bright yellow text on hover */
+}
+
+/* Video Overlay styles */
+.videoOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8); /* Dark overlay */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.videoPlayer {
+  max-width: 90%;
+  max-height: 90%;
+  background: rgba(147, 51, 234, 0.9); /* Transparent purple */
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/*************** End of Project Styles ***********************/
+
+/*************** End of Project Styles ***********************/
+
+
+/******************** STARTED INTERNSHIPS PAGE STYLES ********************/
+/* Internships Section */
+
+#internships {
+  padding: 5rem 2rem;
+  background: linear-gradient(135deg, #81e6d9, #d6bcfa); /* Teal to lavender gradient */
+  color: #1f2937; /* Dark gray for text contrast */
+}
+
+#internships .max-w-4xl {
+  max-width: 70rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#internships h1 {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #1f2937; /* Dark gray for heading */
+  margin-bottom: 1.5rem;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: color 0.4s ease, transform 0.4s ease;
+}
+
+#internships h1:hover {
+  color: #34d399; /* Bright teal on hover */
+  transform: scale(1.1); /* Slightly larger on hover */
+}
+
+#internships p {
+  font-size: 1.2rem;
+  color: #4b5563; /* Gray for description */
+  margin-bottom: 2.5rem;
+  line-height: 1.8;
+  transition: color 0.4s ease;
+}
+
+#internships p:hover {
+  color: #9ca3af; /* Lighter gray on hover */
+}
+
+#internships .grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  transition: all 0.3s ease;
+}
+
+#internships .relative {
+  position: relative;
+  border-radius: 0.75rem;
+  border: 2px solid #d1fae5; /* Light teal border */
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent background for depth */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+  transition: box-shadow 0.3s ease, transform 0.3s ease, background 0.3s ease;
+}
+
+#internships .relative:hover {
+  box-shadow: 0 25px 40px rgba(52, 211, 153, 0.5); /* Soft teal shadow */
+  transform: translateY(-10px); /* Lift effect on hover */
+  background-color: rgba(245, 245, 245, 0.8); /* Light gray background on hover */
+}
+
+#internships .text-xl {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1f2937; /* Dark gray text color for role */
+  transition: color 0.4s ease, transform 0.4s ease;
+}
+
+#internships .text-xl:hover {
+  color: #3b82f6; /* Bright blue on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+#internships .text-gray-500 {
+  color: #6b7280; /* Muted gray for company text */
+}
+
+/*****************Internship Ended****************/
+
+/***************** Contact Form *********/
+/***************** Contact Form Styles *********/
+
+/* Contact Section */
+#contact {
+  padding: 6rem 2rem;
+  background: linear-gradient(135deg, #0d3b66, #faa307); /* New gradient */
+  color: #09ec54;
+}
+
+#contact h1 {
+  font-size: 2.8rem;
+  color: #0748ca;
+  margin-bottom: 2.5rem;
+  font-weight: 800;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: color 0.3s ease, transform 0.4s ease, text-shadow 0.4s ease;
+}
+
+#contact h1:hover {
+  color: #f77f00;
+  transform: scale(1.1);
+  text-shadow: 0 6px 12px rgba(255, 127, 0, 0.6);
+}
+
+/* Contact Form Container */
+.contact-container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 1rem;
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s, transform 0.3s, background-color 0.3s;
+}
+
+.contact-container:hover {
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.2);
+  transform: translateY(-10px);
+}
+
+/* Input and TextArea Styling */
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.75rem;
+  background-color: #fff;
+  transition: all 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #faa307;
+  box-shadow: 0 0 8px 2px #faa307;
+  outline: none;
+}
+
+/* Submit Button */
+.submit-button {
+  background-color: #faa307;
+  padding: 0.8rem 1.5rem;
+  color: #fff;
+  font-size: 1.2rem;
+  border-radius: 2rem;
+  box-shadow: 0 5px 15px rgba(250, 163, 7, 0.3);
+  transition: background-color 0.4s ease, transform 0.2s ease;
+}
+
+.submit-button:hover {
+  background-color: #e85d04;
+  transform: translateY(-3px);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  #contact {
+    padding: 4rem 1.5rem;
+  }
+
+  #contact h1 {
+    font-size: 2.3rem;
+  }
+
+  .submit-button {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #contact {
+    padding: 3rem 1rem;
+  }
+
+  #contact h1 {
+    font-size: 1.9rem;
+  }
+
+  .submit-button {
+    font-size: 1rem;
+    padding: 0.75rem 1.25rem;
+  }
+}
+
+/***************** Contact Form *********/
+
+
+
+/**************** Started Live Texts ************************************/
+
+/* Import Google Fonts */
+
+.live-text {
+  font-family: 'Roboto', sans-serif; /* Use Roboto font */
+  font-size: 3rem; /* Adjust font size as needed */
+  font-weight: 900; /* Apply bold weight */
+  background: linear-gradient(45deg, #ea0a64, #ea0a64, #ea0a64, #ea0a64); /* Cool Gradient Colors */
+  -webkit-background-clip: text; /* Clipping background to text */
+  -webkit-text-fill-color: transparent; /* Makes text color transparent to show gradient */
+  background-size: 300% 300%; /* Extended gradient background for more movement */
+  animation: gradientAnimation 10s ease infinite, pulseAnimation 1.5s ease-in-out infinite; /* Enhanced animations */
+  transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for scaling and color change */
+}
+
+.live-text:hover {
+  transform: scale(1.1); /* Slightly more scale up on hover */
+  color: #ea0a64; /* Change text color on hover */
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 0%;
+  }
+  25% {
+    background-position: 100% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  75% {
+    background-position: 0% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+/**************** Skills Styles ***********************/
+/* Skills Section */
+#skills {
+  padding: 3rem 1.5rem; /* Reduced padding for top and bottom */
+  background: linear-gradient(135deg, #3a1c71, #d76d77); /* Gradient background */
+  color: #f7fafc; /* Light text color for better contrast */
+}
+
+/* Heading styles */
+#skills h1 {
+  font-size: 3rem; /* Large font size for heading */
+  color: #f9e7e7; /* Soft white text for heading */
+  margin-bottom: 2rem; /* Consistent margin */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Subtle text shadow for depth */
+}
+
+/* Paragraph styles */
+#skills p {
+  font-size: 1rem; /* Font size for description */
+  color: #e2e8f0; /* Light gray color for description */
+  margin-bottom: 1rem; /* Reduced margin */
+  line-height: 1.7; /* Line height for readability */
+  font-style: italic; /* Italicized for emphasis */
+}
+
+/* Grid layout */
+#skills .grid {
+  display: grid;
+  gap: 1; /* Reduced gap between grid items */
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid layout */
+}
+
+/* Skill item styles */
+#skills .relative {
+  position: relative; /* Relative positioning for hover effects */
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background for skill items */
+  border-radius: 1rem; /* Rounded corners */
+  padding: 1rem; /* Adjusted padding inside the item */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Light shadow for depth */
+}
+
+/* Skill item hover effect */
+#skills .relative:hover {
+  transform: translateY(-5px); /* Slight lift effect on hover */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* Increased shadow on hover for emphasis */
+}
+
+/* Image styles */
+#skills img {
+  border-radius: 50%; /* Circular images */
+  width: 100px; /* Fixed width for images */
+  height: 100px; /* Fixed height for images */
+  object-fit: cover; /* Maintain aspect ratio */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Soft shadow for images */
+}
+
+/* Title styles */
+#skills h2 {
+  font-size: 1.; /* Font size for skill names */
+  font-weight: 600; /* Semi-bold font weight */
+  color: #2d3748; /* Darker gray color for titles */
+  margin-top: 1rem; /* Margin above skill names */
+  text-transform: uppercase; /* Uppercase for emphasis */
+  letter-spacing: 1px; /* Added letter spacing for style */
+}
+
+/****************** Ended Skills **********************/
+
+
+
+/*******************Started Education**************************/
+
+#education {
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #e91c09e6, #2cec05);
+  background-attachment: scroll; /* Change to 'scroll' for better mobile support */
+  overflow: hidden; /* Ensures background stays consistent on smaller screens */
+}
+
+#education .space-y-6 > * + * {
+  margin-top: 1.5rem;
+}
+
+#education .shadow-lg {
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+  border-radius: 1rem;
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  background-color: #e0f7fa;
+}
+
+#education .shadow-lg:hover {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+  transform: translateY(-8px);
+  background-color: #b2ebf2;
+}
+
+#education .flex {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap; /* Ensures elements wrap on smaller screens */
+}
+
+#education .flex .mr-4 {
+  margin-right: 2rem;
+}
+
+#education img {
+  border-radius: 1rem;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+#education img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#education h3 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #00796b;
+  margin-bottom: 0.5rem;
+}
+
+#education p {
+  font-size: 1.1rem;
+  color: #004d40;
+  line-height: 1.7;
+}
+
+#education p.mb-1 {
+  margin-bottom: 0.25rem;
+}
+
+#education p.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
+#education p:last-of-type {
+  color: #00796b;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  #education {
+    padding: 3rem 1rem; /* Reduced padding for smaller screens */
+  }
+  
+  #education h3 {
+    font-size: 1.4rem; /* Smaller font size for better fit */
+  }
+  
+  #education p {
+    font-size: 1rem; /* Adjusted font size */
+  }
+  
+  #education .flex .mr-4 {
+    margin-right: 1rem; /* Adjust spacing for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  #education {
+    padding: 2rem 0.5rem; /* Further reduced padding for very small screens */
+  }
+  
+  #education h3 {
+    font-size: 1.2rem;
+  }
+  
+  #education p {
+    font-size: 0.9rem; /* More adjustments for readability */
+  }
+}
+
+/*******************Ended Education**************************/
+
+
+/**************** CERTIFICATIONS ****************************/
+/* Certifications Section */
+
+#certifications {
+  padding: 6rem 2rem;
+  background: linear-gradient(135deg, #eef2f3, #8e9bff); /* Soft gradient background with light purple tones */
+}
+
+#certifications .max-w-4xl {
+  max-width: 72rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#certifications h1 {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #1e3a8a; /* Dark blue for heading */
+  margin-bottom: 2rem;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: color 0.3s ease-in-out, transform 0.4s ease-in-out, text-shadow 0.4s ease-in-out;
+}
+
+#certifications h1:hover {
+  color: #4f46e5; /* Light purple color on hover */
+  transform: scale(1.1);
+  text-shadow: 0 6px 12px rgba(79, 70, 229, 0.6); /* Light purple glow effect */
+}
+
+#certifications p {
+  font-size: 1.25rem;
+  color: #374151; /* Darker gray for description */
+  margin-bottom: 2.5rem;
+  line-height: 1.8;
+  transition: color 0.3s ease-in-out;
+}
+
+#certifications p:hover {
+  color: #1f2937; /* Slightly darker gray on hover */
+}
+
+#certifications .grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+#certifications .relative {
+  position: relative;
+  border-radius: 1rem;
+  border: 2px solid #e2e8f0; /* Light border for the card */
+  background: rgba(255, 255, 255, 0.9); /* Light background for cards */
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+  transition: box-shadow 0.4s ease-in-out, transform 0.4s ease-in-out, background-color 0.4s ease-in-out;
+}
+
+#certifications .relative:hover {
+  box-shadow: 0 25px 45px rgba(79, 70, 229, 0.5); /* Light purple shadow on hover */
+  transform: translateY(-10px);
+  background-color: rgba(79, 70, 229, 0.1); /* Very light purple background on hover */
+}
+
+#certifications .text-xl {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1e3a8a; /* Dark blue for certification title */
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+#certifications .text-xl:hover {
+  color: #4f46e5; /* Light purple color on hover */
+  transform: scale(1.05);
+}
+
+#certifications .text-gray-500 {
+  color: #6b7280; /* Medium gray for issuer */
+}
+
+#certifications .text-blue-500 {
+  color: #3b82f6; /* Light blue color for links */
+  font-weight: 600;
+  transition: color 0.3s ease-in-out, text-decoration 0.3s ease-in-out;
+}
+
+#certifications .text-blue-500:hover {
+  color: #2563eb; /* Slightly darker light blue on hover */
+  text-decoration: underline;
+}
+
+/**************** CERTIFICATIONS ****************************/
+
+
+
+
+
+
+
