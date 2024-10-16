@@ -126,7 +126,7 @@ input, textarea, select {
 /* Container styles */
 #projects {
   padding: 4rem 2rem;
-  background: linear-gradient(135deg, #0fa30c, #fbc531); /* Gradient background with blue and yellow */
+  background: linear-gradient(135deg, #eef2f3, #8e9bff); /* Gradient background with blue and yellow */
   color: #fff;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
   transition: background 0.4s ease-in-out;
@@ -158,7 +158,7 @@ h1:hover {
 
 p {
   font-size: 1.2rem;
-  color: #f8f8f2; /* Light color for better readability */
+  color: #191916; /* Light color for better readability */
   text-align: center;
   margin-bottom: 2.5rem;
   line-height: 1.6;
@@ -613,7 +613,7 @@ p {
 
 #education {
   padding: 4rem 2rem;
-  background: linear-gradient(135deg, #e91c09e6, #2cec05);
+  background: linear-gradient(135deg, #81e6d9, #d6bcfa);
   background-attachment: scroll; /* Change to 'scroll' for better mobile support */
   overflow: hidden; /* Ensures background stays consistent on smaller screens */
 }

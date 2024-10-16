@@ -6,7 +6,7 @@ import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 const texts = [
   'Welcome to my portfolio!',
-  "Hello, I'm NTV Kalyan",
+  "Hello, I'm Neelam Tirumala Venkata Kalyan",
   'A Fullstack Developer',
   'An AI Enthusiast',
   'Open Source Contributor',
@@ -26,8 +26,8 @@ const HomeSection = () => {
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
   const [currentSentenceIndex, setCurrentSentenceIndex] = useState(0);
   const [aboutMeText, setAboutMeText] = useState(aboutMeSentences[0]);
-  const typingRef = useRef<NodeJS.Timeout | null>(null);  // Adjusted type
-  const aboutMeTypingRef = useRef<NodeJS.Timeout | null>(null);  // Adjusted type
+  const typingRef = useRef<NodeJS.Timeout | null>(null);
+  const aboutMeTypingRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
     const typingSpeed = 100;
@@ -44,7 +44,7 @@ const HomeSection = () => {
             charIndex += 1;
             return text.slice(0, charIndex);
           } else {
-            clearInterval(typingRef.current as NodeJS.Timeout); // Cast to NodeJS.Timeout
+            clearInterval(typingRef.current as NodeJS.Timeout);
             typingRef.current = setTimeout(() => {
               setCurrentTextIndex(prevIndex => (prevIndex + 1) % texts.length);
               typeText();
@@ -59,7 +59,7 @@ const HomeSection = () => {
 
     return () => {
       if (typingRef.current) {
-        clearInterval(typingRef.current as NodeJS.Timeout); // Clear interval on cleanup
+        clearInterval(typingRef.current as NodeJS.Timeout);
       }
     };
   }, [currentTextIndex]);
@@ -79,7 +79,7 @@ const HomeSection = () => {
             charIndex += 1;
             return sentence.slice(0, charIndex);
           } else {
-            clearInterval(aboutMeTypingRef.current as NodeJS.Timeout); // Cast to NodeJS.Timeout
+            clearInterval(aboutMeTypingRef.current as NodeJS.Timeout);
             aboutMeTypingRef.current = setTimeout(() => {
               setCurrentSentenceIndex(prevIndex => (prevIndex + 1) % aboutMeSentences.length);
               typeAboutMeSentence();
@@ -94,7 +94,7 @@ const HomeSection = () => {
 
     return () => {
       if (aboutMeTypingRef.current) {
-        clearInterval(aboutMeTypingRef.current as NodeJS.Timeout); // Clear interval on cleanup
+        clearInterval(aboutMeTypingRef.current as NodeJS.Timeout);
       }
     };
   }, [currentSentenceIndex]);
@@ -108,23 +108,10 @@ const HomeSection = () => {
         />
       </Head>
 
-      <section id="home" className="relative h-screen flex items-center justify-center bg-gradient-to-r from-purple-400 to-blue-500">
-        <div className="relative z-10 flex flex-col items-center text-center p-6 bg-white rounded-lg shadow-xl max-w-md mx-auto">
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1 }}
-          >
-            <Image
-              src="/myphoto.jpg"
-              alt="Your Photo"
-              width={128}
-              height={128}
-              className="w-32 h-32 rounded-full border-4 border-gray-200 shadow-lg mb-4"
-            />
-          </motion.div>
+      <section id="home" className="relative h-screen flex items-center justify-between bg-gradient-to-r from-purple-400/80 to-blue-500/80">
+        <div className="relative z-10 flex flex-col items-start text-left p-6 max-w-lg mx-auto">
           <motion.p
-            className="text-3xl font-semibold mb-2 text-gray-800"
+            className="text-4xl font-semibold mb-2 text-white"
             initial={{ y: 50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 1, delay: 0.4 }}
@@ -137,7 +124,7 @@ const HomeSection = () => {
               href="https://github.com/kalyanneelam77"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-800 transition duration-300 hover:text-gray-600"
+              className="text-white transition duration-300 hover:text-gray-200"
               whileHover={{ scale: 1.1 }}
             >
               <FaGithub size={30} />
@@ -146,7 +133,7 @@ const HomeSection = () => {
               href="https://www.linkedin.com/in/tirumala-venkata-kalyan-neelam-1287b0231/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-800 transition duration-300 hover:text-gray-600"
+              className="text-white transition duration-300 hover:text-gray-200"
               whileHover={{ scale: 1.1 }}
             >
               <FaLinkedin size={30} />
@@ -154,7 +141,7 @@ const HomeSection = () => {
           </div>
 
           <motion.div
-            className="mt-8 p-4 bg-green-100 rounded-lg shadow-lg text-left"
+            className="mt-8 p-4 bg-green-100 bg-opacity-70 rounded-lg shadow-lg text-left"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.6 }}
@@ -177,6 +164,20 @@ const HomeSection = () => {
             </motion.p>
           </motion.div>
         </div>
+
+        <motion.div
+          className="relative z-10 overflow-hidden"
+          whileHover={{ scale: 1.05 }}
+          transition={{ type: 'spring', stiffness: 300 }}
+        >
+          <Image
+            src="/myphoto.jpg"
+            alt="Your Photo"
+            width={600}
+            height={600}
+            className="h-screen object-cover rounded-lg"
+          />
+        </motion.div>
       </section>
     </>
   );

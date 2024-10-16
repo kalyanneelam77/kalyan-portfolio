@@ -10,7 +10,7 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: 'My Next.js App',
+  title: 'Kalyans Portfolio',
   description: 'A modern web application built with Next.js',
 };
 
